@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);}
+
+body{
+    min-height: 100vh;
+    display:grid;
+    place-items: center;
+    background-color: black;
+    color:var(--white);
+    font-size:15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+main{
+    width:350px;
+    background-image:radial-gradient(circle at top,var(--Dark-Blue), 
+                        var(--Very-Dark-Blue));
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+nav{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--Dark-Blue);
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+p{  margin:1rem 0;
+    color: var(--lightGrey);
+}
+.rating{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.rating-btn{  
+    color: var(--lightGrey);
+    font:inherit;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.rating-btn:hover{
+    background-color: var(--Orange);
+    color: var(--white);
+}
+.rating-btn:focus{
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+.submit{
+    font: inherit;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width:100%;
+    background-color: var(--Orange);
+    color: var(--white);
+    border: none;
+    padding:0.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.submit:focus{
+    background-color:var(--white);
+    color:var(--Orange);
+}
+/* thankyou page */
+.thankyou{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.thankyou img{
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: 150px;
+}
+.thankyou text{
+    display: inline;
+    margin: auto;
+    width: auto;
+    padding :6px 15px;
+    color: var(--Orange);
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+@media screen and (max-width: 375px){
+    main{
+        width: 300px;
+    }
+}
